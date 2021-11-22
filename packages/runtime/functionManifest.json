@@ -1,0 +1,14 @@
+{
+    "storage": {
+        "path": "./functions/storageFunction/",
+        "main": "index.js",
+        "handler": "handler",
+        "name": "storageFunction"
+    },
+    "http": {
+        "path": "./functions/httpFunction/",
+        "main": "index.js",
+        "handler": "handler",
+        "name": "httpFunction"
+    }
+}

@@ -1,0 +1,4 @@
+[
+    "packages/event-bus",
+    "packages/storage-event-producer",
+]

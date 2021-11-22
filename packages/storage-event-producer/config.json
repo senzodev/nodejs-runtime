@@ -1,0 +1,7 @@
+{
+    "watchPath": "/source-bucket",
+    "eventBus": {
+        "url": "http://localhost:5000"
+    },
+    "name": "storage"
+}

@@ -1,0 +1,5 @@
+{
+    "port": 6000,
+    "name": "invoker",
+    "runtime": ""
+}

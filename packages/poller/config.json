@@ -1,0 +1,10 @@
+{
+    "port": 5000,
+    "name": "event-poller",
+    "eventBus": {
+        "url": "http://localhost:5000"
+    },
+    "invoker": {
+        "url": "http://localhost:6000"
+    }
+}

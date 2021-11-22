@@ -1,0 +1,44 @@
+{
+  "name": "nodejs-runtime",
+  "version": "1.0.0",
+  "description": "Example Serverless Runtime built using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint",
+    "pre-publish": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senzodev/nodejs-runtime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senzodev/nodejs-runtime/issues"
+  },
+  "homepage": "https://github.com/senzodev/nodejs-runtime#readme",
+  "workspaces": [
+    "packages/runtime",
+    "packages/storage-event-producer",
+    "packages/event-bus",
+    "packages/poller",
+    "packages/http-api",
+    "packages/invoker",
+    "functions/sync-function",
+    "functions/async-function",
+    "packages/storage-interface"
+  ],
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "^27.3.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.2"
+  }
+}
