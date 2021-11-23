@@ -11,8 +11,8 @@ const createInterface = (config, requestHandler, eventBus) => {
     })
 
     req.on('end', () => {
+      // console.log(name, ': Event Bus called - method', req.method)
       const reqResponse = requestHandler(req.method, data, eventBus)
-
       const contentType =
         reqResponse.status == 200
           ? { 'Content-Type': 'application/json' }

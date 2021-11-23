@@ -24,7 +24,7 @@ class eventBus {
 
   getEvents () {
     const processTime = Date.now()
-    let returnEvent = []
+    let returnEvent = new Array()
 
     for (let i = 0; i < this.bus.length; i++) {
       const event = this.bus[i]

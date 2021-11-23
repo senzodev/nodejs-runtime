@@ -17,8 +17,6 @@ if (!isMainThread) {
 }
 */
 
-runtime.init()
-
 const { runAsWorker } = require('sync-threads')
 
 runAsWorker(() => {
@@ -28,6 +26,6 @@ runAsWorker(() => {
     timestamp: Date.now()
   }
 
-  const response = runtime.run(context)
+  const response = runtime(context)
   return response
 })

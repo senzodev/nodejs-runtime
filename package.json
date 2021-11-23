@@ -39,6 +39,7 @@
     "jest": "^27.3.0"
   },
   "dependencies": {
+    "esbuild": "^0.13.15",
     "node-fetch": "^2.6.2"
   }
 }

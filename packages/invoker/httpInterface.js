@@ -1,4 +1,4 @@
-const http = require('http')
+import http from 'http'
 
 const createInterface = (config, requestHandler) => {
   const port = config ? (config.port ? config.port : 6000) : 6000
@@ -19,7 +19,6 @@ const createInterface = (config, requestHandler) => {
       }
       if (req.method.toLowerCase() == 'post') {
         reqResponse = await requestHandler(name, JSON.parse(data))
-        console.log('Did I wait?')
       }
 
       const contentType = { 'Content-Type': 'application/json' }
@@ -51,4 +50,4 @@ const createInterface = (config, requestHandler) => {
   server.listen(port)
 }
 
-module.exports = createInterface
+export default createInterface

@@ -23,9 +23,11 @@ const name = config.name ? config.name : 'poller'
 const eventBusUrlString = config.eventBus.url
   ? config.eventBus.url
   : 'http://localhost:5000'
+
 const invokeUrlString = config.invoker.url
   ? config.invoker.url
   : 'http://localhost:6000'
+
 const frequency = config.frequency ? config.frequency : 100
 
 setTimeout(() => {

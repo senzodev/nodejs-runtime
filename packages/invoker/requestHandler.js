@@ -1,6 +1,6 @@
-const path = require('path')
-const runtime = require('../runtime')
-const ulid = require('ulid')
+// const path = require('path')
+import runtime from '../runtime/index.js'
+import ulid from 'ulid'
 
 const newWorker = async event => {
   const context = {
@@ -20,13 +20,16 @@ const requestHandler = async (name, event) => {
   }
   try {
     const invocationResponse = await newWorker(event)
-    console.log(invocationResponse)
+    // console.log(invocationResponse)
+
     if (!invocationResponse) throw new Error('Unexpected Response from runtime')
 
     if (invocationResponse.error) throw new Error(invocationResponse.error)
 
     const events = event.map(item => {
-      return { id: item.id }
+      return {
+        id: item.id
+      }
     })
     response = {
       status: 200,
@@ -38,4 +41,4 @@ const requestHandler = async (name, event) => {
   return response
 }
 
-module.exports = requestHandler
+export default requestHandler

@@ -1,4 +1,6 @@
 [
     "packages/event-bus",
     "packages/storage-event-producer",
+    "packages/poller",
+    "packages/invoker"
 ]

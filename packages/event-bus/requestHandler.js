@@ -29,11 +29,15 @@ const postHandler = (eventBus, data) => {
   let response = { status: 400 }
   const jsonData = isJSON(data)
   if (jsonData) {
-    const body = eventBus.processEvent(jsonData.id)
-    if (body) {
-      response = { status: 200, body }
+    if ('id' in jsonData) {
+      const body = eventBus.processEvent(jsonData.id)
+      if (body) {
+        response = { status: 200, body }
+      } else {
+        response = { status: 404, body: 'Event not found' }
+      }
     } else {
-      response = { status: 404, body: 'Event not found' }
+      response = { status: 400, body: 'Unknown Event' }
     }
   } else {
     response = { status: 400, body: 'JSON data expected' }

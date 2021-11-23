@@ -6,5 +6,6 @@
     },
     "invoker": {
         "url": "http://localhost:6000"
-    }
+    },
+    "frequency": 500
 }
